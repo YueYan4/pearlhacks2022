@@ -4,7 +4,7 @@ r = sr.Recognizer()
 r.energy_threshold = 300
 mic = sr.Microphone()
 
-
+#function to get mic input and write it to a txt file
 def recognize_speech_from_mic(r, mic):
     with mic as source:
         r.adjust_for_ambient_noise(source)
@@ -17,7 +17,8 @@ def recognize_speech_from_mic(r, mic):
             return diary_file
         except Exception:
             return "Error"
-    
+   
+#function to read the txt file 
 def read_file(diary_file, chunk_size=5242880):
     with open(diary_file, 'rb') as _file:
         while True:
