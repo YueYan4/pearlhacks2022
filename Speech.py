@@ -1,3 +1,6 @@
+#This program takes input from a mic and writes it to a txt file
+#It can also read the txt file
+
 from distutils.command.check import SilentReporter
 import speech_recognition as sr
 import time
